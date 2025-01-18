@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML practice</title>
+</head>
+
+<body>
+    <h1 style="font-size: x-large; color: #1373a7;">Inline-level Elements</h1>
+    <p>Inline elements are elements whose horizontal width is determined by the width of the content they contain.
+        The <code>&lt;strong&gt;</code> element and the <code> &lt;em&gt;</code> element are both examples of inline
+        elements.</p>
+
+    <p>Inline elements do not take up their own line of horizontal space. Manually add a <code>&lt;br&gt;</code> to move
+        to a new line.</p>
+
+    <code>
+        &lt;h1 style="font-size: x-large; color: #1373a7;"&gt; <br />
+        Inline-level Elements <br />
+        &lt;/h1&gt; <br /> <br />
+    </code>
+
+    <strong>My strong text</strong>
+    <br>
+    <em>My emphasized text</em>
+
+
+    <h1 style="font-size: 40px; color: green;">Block-level Elements</h1>
+    <p>Block-level elements take up an entire line of horizontal space on a webpage.
+        This means that they automatically start on a new line and that they automatically push subsequent elements onto
+        a new line as well.</p>
+
+    <p>For example the <code>&lt;h3&gt;</code> element:</p>
+    <h3>This is a Heading 3</h3>
+
+    </br>
+    <h1>Adding an image</h1>
+    <h2>Informative Images</h2>
+    <p>For informative images, alternative text should clearly and concisely describe the subject matter of the image,
+        without referring to the image itself. For example, do not write “Image of a Gidget the dog, Secret Life of
+        Pets” but "Gidget the dog, Secret Life of Pets mascot."
+    </p>
+    <img src="/images/gidget.png" alt="Gidget the dog, Secret Life of Pets mascot." width="200">
+    <br />
+    <code>
+        &lt;img src="gidget.png" alt="Gidget the dog, Secret Life of Pets mascot." width="200"/&gt; <br />
+    </code>
+    <br />
+    <h2>Decorative Images</h2>
+    <p>For decorative images, the alt attribute should still be used but with a null value, as this improves the screen
+        reader experience: <img src="images/decorative_image.jpeg" alt="">.
+
+        For a useful guide on determining whether an image is informative or decorative, visit
+        <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An <em>alt</em> Decision Tree</a>
+    </p>
+
+    <h1>The div element</h1>
+    <p>The HTML Content Division element <code>&lt;div&gt;</code> acts as a container to structure a webpage into
+        separate components
+        for individual styling. We can specify attributes to adjust its size, color, position, or other features.
+        Typically, with CSS</p>
+
+    <div style="width:300px; height:200px; background-color:lightskyblue;">
+        <div style="width:100px;height:100px; background-color:lightseagreen;">
+        </div>
+    </div>
+    <br />
+    <code>
+        &lt;div style="width:300px; height:200px; background-color:lightskyblue;"&gt; <br />
+        &lt;div style="width:100px;height:100px; background-color:lightseagreen;"&gt; &lt;/div&gt; <br />
+        &lt;/div&gt; <br /> <br />
+    </code>
+
+    <h1>Adding color</h1>
+    <p>We can use HTML to modify the text color of elements such as <code>&lt;p&gt;</code> or <code>&lt;h1&gt;</code>
+    </p>
+    <p style="color:green;">This is green text.</p>
+    <code>
+        &lt;p style="color:green;">This is green text.&gt;&lt;/p <br /> <br />
+    </code>
+
+    <p>The color of a border is modified by using the <code>&lt;style&gt;</code> attribute and the
+        <code>&lt;border&gt;</code> property:
+        <br /><br />
+        <code>
+            &lt;img src="https://html.sammy-codes.com/images/small-profile.jpeg" style="border: 2px solid blue"/&gt; <br /> <br />
+        </code>
+        <img src="https://html.sammy-codes.com/images/small-profile.jpeg" style="border: 2px solid blue" />
+        <br /><br />
+        <code>
+            &lt;img src="https://html.sammy-codes.com/images/small-profile.jpeg" style="border: 2px dashed lightseagreen"/&gt; <br /> <br />
+        </code>
+        <img src="https://html.sammy-codes.com/images/small-profile.jpeg" style="border: 2px dashed lightseagreen" />
+        <br /> <br />
+        Colours can be added in hexadecimal values too: like #0000FF (blue), #40E0D0 (turquoise), or #C0C0C0 (silver)
+    </p>
+
+    <h1>Setup & Format the HTML project</h1>
+    <p>
+        The first step is to define the <code>&lt;!DOCTYPE html&gt;</code>. This declaration tells the browser which
+        type
+        of HTML is being used
+        as there are multiple versions of HTML. In this declaration, html specifies the current web standard of HTML,
+        which is HTML5.
+    </p>
+    <p>
+        The second step is to define the <code>&lt;html&gt;</code> element. This tells the browser that all content it
+        contains is intended to be read as HTML.
+        We also add the <code>&lt;lang&gt;</code> element, which specifies the language of the webpage
+    </p>
+    <p>
+        The third step is to define the <code>&lt;head&gt;</code> element. This creates a section to include information
+        about our web document
+        and that's primarily used by browsers and search engines to interpret the content of the page (SEO positioning).
+        We then add the <code>&lt;title&gt;</code> and the <code>&lt;meta&gt;</code> elements.
+        The <code>&lt;meta charset="utf-8"&gt;</code> specifies the document’s character set to UTF-8, a unicode format
+        that supports
+        a majority of characters from a wide variety of written languages.
+    </p>
+    <p>
+        Next step is to add a favicon to the website with HTML. Recommended: use simple and high-contrast images only.
+        A good site to create them is <a href="https://www.favicon.cc/">favicon.cc</a>
+        A favicon is a small image that is located in the browser tab to the left of a webpage's title. Create a folder
+        called "images"
+        and save the favicon image there.
+    </p>
+    <p>
+        Then we define the <code>&lt;body&gt;</code> element. If we add <code>style="margin: 0;"</code> we will remove
+        the margin surronding the page. If we add <code>style="text-align:center;"</code> we can align the text.
+    </p>
+    <p>
+        Finally, we add a <code>&lt;footer&gt;</code> section. For checking the metadata try <a
+            href="https://ogp.me/.">The Open Graph protocol</a> and check the <a
+            href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup">full Twitter
+            Card markup specification.</a>. To test the Webpage Metadata, use the <a
+            href="https://en.rakko.tools/tools/9/">Open Graph Debugger</a>
+        or try the <a href="https://cards-dev.twitter.com/validator">Twitter Card validator</a>, <a
+            href="https://developers.facebook.com/tools/debug/">Facebook Sharing Debugger</a>, <a
+            href="https://www.linkedin.com/post-inspector/">LinkedIn Post Inspector</a>, or <a
+            href="https://developers.pinterest.com/tools/url-debugger/">Pinterest Rich Pins Validator</a>
+    </p>
+</body>
+</html>
